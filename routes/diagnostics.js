@@ -11,19 +11,24 @@ diagnostics.get('/', (req, res) => {
 // POST Route for a error logging
 diagnostics.post('/', (req, res) => {
   // TODO: Logic for appending data to the db/diagnostics.json file
+  //console.log(req.body);
+  const { isValid, errors } = req.body;
+
   const newDiagPost = {
     time : Date.now(),
     error_id : uuidv4(),
-    errors : req.body,
-  };
-  readAndAppend(newDiagPost, './db/diagnostics.json');
-
-  const response = {
-    status: 'success',
-    body: newDiagPost,
+    errors: errors,
   };
 
-  res.json(response);
+  if (!isValid) {
+    readAndAppend(newDiagPost, './db/diagnostics.json');
+    res.json(`Diagnostic information added 🔧`);
+  } else {
+    res.json({
+      message: 'Object is valid, not logging. Check front end implementation',
+      error_id: newDiagPost.error_id,
+    });
+  }
 
 });
 

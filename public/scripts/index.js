@@ -133,8 +133,8 @@ const submitDiagnostics = (submissionObj) => {
           body: JSON.stringify(submissionObj),
         })
           .then((res) => res.json())
-          .then((data) => {
-            console.log(data)
+          .then(() => {
+            showErrors(submissionObj.errors);
           })    
           .catch((error) => {
             console.error('Error:', error);
@@ -161,6 +161,7 @@ const handleFormSubmit = (e) => {
 
   // Run the tip object through our validator function
   const submission = validateTip(newTip);
+  console.log(submission);
 
   // If the submission is valid, post the tip. Otherwise, handle the errors.
   return submission.isValid ? postTip(newTip) : submitDiagnostics(submission);

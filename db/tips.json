@@ -22,5 +22,11 @@
         "tip": "testtesttesttest",
         "topic": "UX",
         "tip_id": "7bd62482-eba3-407b-8774-8d3fef91ac21"
+    },
+    {
+        "username": "tester",
+        "tip": "restful api testing",
+        "topic": "UX",
+        "tip_id": "7625f9dd-b8f6-4e45-939b-36607b2100c7"
     }
 ]
