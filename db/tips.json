@@ -16,17 +16,5 @@
         "tip": "Don't use three different fonts on the same page",
         "topic": "UX",
         "tip_id": "c83c28af-9197-4f2f-b119-03236ecfc0b6"
-    },
-    {
-        "username": "aaaaa",
-        "tip": "testtesttesttest",
-        "topic": "UX",
-        "tip_id": "7bd62482-eba3-407b-8774-8d3fef91ac21"
-    },
-    {
-        "username": "tester",
-        "tip": "restful api testing",
-        "topic": "UX",
-        "tip_id": "7625f9dd-b8f6-4e45-939b-36607b2100c7"
     }
 ]
