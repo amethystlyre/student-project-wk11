@@ -1,8 +1,14 @@
-const tips = require('../routes/tips.js');
+const request = require("supertest");
+const app = require("../app.js");
 
-describe('Tips', () => {
+describe('Tips Endpoint', () => {
   test('should retrieve a list of tips when using the GET method', () => {
-    
-    expect().toBe();
+    return request(app)
+    .get("/api/tips")
+    .then(response => {
+      expect(response.statusCode).toBe(200);
+    });
   });
-});
+})
+
+
